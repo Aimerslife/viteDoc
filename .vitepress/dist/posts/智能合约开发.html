@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>智能合约开发 | Clark Cui</title>
+    <meta name="description" content="智能合约">
+    <link rel="stylesheet" href="/assets/style.0b97b2d7.css">
+    <link rel="modulepreload" href="/assets/Home.bdf9aa60.js">
+    <link rel="modulepreload" href="/assets/app.10064a06.js">
+    <link rel="modulepreload" href="/assets/posts_智能合约开发.md.48e85489.lean.js">
+    
+    <link rel="icon" type="image/jpeg" href="/avator.jpg">
+  <meta name="author" content="Clark Cui">
+  <meta property="og:title" content="Home">
+  <meta property="og:description" content="Home of Clark Cui">
+  <meta name="twitter:title" content="智能合约开发 | Clark Cui">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><div class="no-sidebar theme"><header class="nav-bar" data-v-40587210><div class="sidebar-button" data-v-40587210><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="Clark Cui, back to home" data-v-40587210 data-v-016a8bd8><img class="logo" src="/tea.svg" alt="Logo" data-v-016a8bd8> Clark Cui</a><div class="flex-grow" data-v-40587210></div><div class="nav" data-v-40587210><nav class="nav-links" data-v-40587210 data-v-35b91e7e><!--[--><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/" data-v-49fe041d>🏡Home <!----></a></div></div><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/tags" data-v-49fe041d>🔖Tags <!----></a></div></div><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/archives" data-v-49fe041d>📃Archives <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--[--><div class="toggleTheme" data-v-f68cd400><div class="light" data-v-f68cd400>🔆</div></div><!--]--><!--]--></header><aside class="sidebar" data-v-17c48e2f><nav class="nav-links nav" data-v-17c48e2f data-v-35b91e7e><!--[--><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/" data-v-49fe041d>🏡Home <!----></a></div></div><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/tags" data-v-49fe041d>🔖Tags <!----></a></div></div><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/archives" data-v-49fe041d>📃Archives <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><!----><!--[--><!--]--></aside><div class="sidebar-mask"></div><main class="page" data-v-8fcebc32><div class="container" data-v-8fcebc32><!--[--><!--[--><!----><!--]--><!--[--><!--[--><h1 class="title" data-v-524a1c9d>智能合约开发</h1><div class="date" data-v-524a1c9d>🕒 lastUpdated: an hour ago</div><!--]--><div class="category" data-v-323418c7><ul data-v-323418c7><!--[--><li class="header" data-v-323418c7><a href="#代码地址" class="header-h1" data-v-323418c7>代码地址</a><!----></li><li class="header" data-v-323418c7><a href="#以太坊客户端" class="header-h1" data-v-323418c7>以太坊客户端</a><!----></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#evm" class="header-h2" data-v-323418c7>EVM</a></li></ul></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#以太坊客户端-1" class="header-h2" data-v-323418c7>以太坊客户端</a></li></ul></li><li class="header" data-v-323418c7><a href="#账户" class="header-h1" data-v-323418c7>账户</a><!----></li><li class="header" data-v-323418c7><a href="#gas" class="header-h1" data-v-323418c7>Gas</a><!----></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#单位" class="header-h2" data-v-323418c7>单位</a></li></ul></li><li class="header" data-v-323418c7><a href="#网络" class="header-h1" data-v-323418c7>网络</a><!----></li><li class="header" data-v-323418c7><a href="#合约的编译、部署、测试" class="header-h1" data-v-323418c7>合约的编译、部署、测试</a><!----></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#_1-remix" class="header-h2" data-v-323418c7>1. Remix</a></li></ul></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#_2-truffle" class="header-h2" data-v-323418c7>2. Truffle</a></li></ul></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#_3-hardhat" class="header-h2" data-v-323418c7>3. Hardhat</a></li></ul></li><!--]--></ul></div><!--]--><!--]--><div style="position:relative;" class="content" data-v-8fcebc32><div><h2 id="代码地址" tabindex="-1">代码地址 <a class="header-anchor" href="#代码地址" aria-hidden="true">#</a></h2><p><a href="https://github.com/xilibi2003/contract-training-code" target="_blank" rel="noopener noreferrer">dlsq</a></p><h2 id="以太坊客户端" tabindex="-1">以太坊客户端 <a class="header-anchor" href="#以太坊客户端" aria-hidden="true">#</a></h2><h3 id="evm" tabindex="-1">EVM <a class="header-anchor" href="#evm" aria-hidden="true">#</a></h3><p>智能合约的运行环境，是一个虚拟机</p><h3 id="以太坊客户端-1" tabindex="-1">以太坊客户端 <a class="header-anchor" href="#以太坊客户端-1" aria-hidden="true">#</a></h3><ol><li>定义：也就是 EVM 的载体，也就是区块链网络中的节点的程序，只要符合网络规范，任何语言都可以实现客户端</li><li>常见的客户端：Geth(Go 实现)、OpenEthereum(Rust 实现)，通过 RPC 提供服务</li></ol><h2 id="账户" tabindex="-1">账户 <a class="header-anchor" href="#账户" aria-hidden="true">#</a></h2><p>本质都是一个 20 个字节表示的地址</p><ol><li><p>外部账户（EOA）：由私钥控制（比如用户的地址）</p></li><li><p>合约账户：代码控制（比如合约代码的部署地址）</p></li></ol><blockquote><p>注意：交易只能从外部账号发出，合约只能被动执行。合约之间的交互称为消息，所有的 gas 都由外部账号支付</p></blockquote><h2 id="gas" tabindex="-1">Gas <a class="header-anchor" href="#gas" aria-hidden="true">#</a></h2><p>GAS 是一个工作量单位，复杂度越大，所需 gas 越多。费用=gas 数量*gas 单价（以太币计价 gwei）</p><h3 id="单位" tabindex="-1">单位 <a class="header-anchor" href="#单位" aria-hidden="true">#</a></h3><ul><li>最小单位：Wei</li><li>10^9 Wei = 1 Gwei</li><li>10^12 Wei = 1 Szabo</li><li>10^15 Wei = 1 Finney</li><li>10^18 Wei = 1 Ether</li></ul><h2 id="网络" tabindex="-1">网络 <a class="header-anchor" href="#网络" aria-hidden="true">#</a></h2><ol><li><a href="https://cn.etherscan.com/" target="_blank" rel="noopener noreferrer">主网（价值网络）</a></li><li><a href="https://goerli.etherscan.io/" target="_blank" rel="noopener noreferrer">测试网</a></li><li>开发模拟网（本地环境，一般就是借助工具起虚拟机）</li></ol><h2 id="合约的编译、部署、测试" tabindex="-1">合约的编译、部署、测试 <a class="header-anchor" href="#合约的编译、部署、测试" aria-hidden="true">#</a></h2><h3 id="_1-remix" tabindex="-1">1. Remix <a class="header-anchor" href="#_1-remix" aria-hidden="true">#</a></h3><p><a href="https://remix.ethereum.org/" target="_blank" rel="noopener noreferrer">链接</a></p><p>在contracts里添加Counter.sol</p><div class="language-sol"><pre><code><span class="token comment">// SPDX-License-Identifier:  MIT</span>
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">^</span><span class="token version number">0.8.0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Counter</span><span class="token punctuation">{</span>
+    <span class="token builtin">uint</span> <span class="token keyword">public</span> counter<span class="token punctuation">;</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span><span class="token punctuation">{</span>
+        counter<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>编辑器左侧面板有文件夹区域、搜索区域、编译区域、部署区域。</p><p>编译区域可选编译器版本。</p><p>部署区域可选部署链，成功后会显示部署地址。部署合约也是一笔交易，需要在钱包确认，也需要gas费。部署成功后会显示交互面板，橙色是触发交易，蓝色仅读取。点击橙色触发交易，需要钱包确认，需要gas费。点击蓝色读就不需要。</p><p>实际操作：environment 选择 injected web3，这里连接 metamusk 钱包，钱包啥网络，就是啥网络。推荐用 goerli（eth 测试网）,去<a href="https://goerlifaucet.com/" target="_blank" rel="noopener noreferrer">goerli faucet</a>申请一点测试币即可。部署前会连接钱包，然后就是用账号部署上去,部署完后可以去<a href="https://goerli.etherscan.io/" target="_blank" rel="noopener noreferrer">测试链查状态</a>。</p><p>部署成功后，点两次橙色触发交易，再点蓝色可以读到此时counter值的状态，控制台打印：</p><div class="language-shell"><pre><code><span class="token punctuation">{</span>
+	<span class="token string">&quot;0&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;uint256: 2&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>注意 remix 中的 environment 如果是默认的，那就是虚拟网络，在区块链浏览器是查不到的，而且不需要钱包验证，也不需要gas费</p></blockquote><h3 id="_2-truffle" tabindex="-1">2. Truffle <a class="header-anchor" href="#_2-truffle" aria-hidden="true">#</a></h3><p>Truffle:编译、部署、测试合约的一整套开发工具</p><p>ganache是开发区块链，提供本地模拟的链上环境</p><p><a href="https://trufflesuite.com/docs/truffle/" target="_blank" rel="noopener noreferrer">官方文档</a></p><p><a href="https://learnblockchain.cn/docs/truffle/" target="_blank" rel="noopener noreferrer">中文文档</a></p><p><a href="https://github.com/clark-cui/truffle-demo" target="_blank" rel="noopener noreferrer">我的代码</a></p><div class="language-shell"><pre><code>Truffle 安装  <span class="token function">npm</span> <span class="token function">install</span> -g truffle
+创建工程 truffle init或者truffle unbox metacoin<span class="token punctuation">(</span>我用的第二个，相当于使用metacoin这个模版，注意需要手动mkdir一个folder，再在里面执行创建，注意配置proxy<span class="token punctuation">)</span>
+</code></pre></div><p>truffle工程包含</p><ul><li>contracts:智能合约目录</li><li>migrations:迁移文件，用来指示如何部署智能合约</li><li>test:智能合约测试用例文件夹</li><li>truffle-config.js:配置文件，配置truffle连接的网络及编译选项</li><li>build:编译结果目录</li></ul><p>改造下folder</p><ol><li><p>删除contracts、migrations、test下的文件</p></li><li><p>contracts里添加Counter.sol</p><div class="language-solidity"><pre><code><span class="token comment">// SPDX-License-Identifier:  MIT</span>
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">^</span><span class="token version number">0.8.0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Counter</span><span class="token punctuation">{</span>
+    <span class="token builtin">uint</span> <span class="token keyword">public</span> counter<span class="token punctuation">;</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span><span class="token punctuation">{</span>
+        counter<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ol><h4 id="合约编译" tabindex="-1">合约编译 <a class="header-anchor" href="#合约编译" aria-hidden="true">#</a></h4><div class="language-shel"><pre><code>//使用命令
+truffle compile
+</code></pre></div><p>在那之前需要配置truffle-config.js，不配置就是默认的0.5.16版本</p><div class="language-js"><pre><code>module<span class="token punctuation">.</span>exports<span class="token operator">=</span><span class="token punctuation">{</span>
+  compilers<span class="token operator">:</span><span class="token punctuation">{</span>
+    solc<span class="token operator">:</span><span class="token punctuation">{</span>
+      version<span class="token operator">:</span><span class="token string">&quot;0.8.9&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>编译完成会输出在build目录,同时也会在命令行输出编译使用的编译器</p><div class="language-shell"><pre><code><span class="token operator">&gt;</span> Compiled successfully using:
+   - solc: <span class="token number">0.8</span>.9+commit.e5eed63a.Emscripten.clang
+</code></pre></div><p>编译结果是json（与合约一一对应），里面abi是和前端交互的，bytecode就是最后部署在链上的东西</p><h4 id="接下来是合约的部署" tabindex="-1">接下来是合约的部署 <a class="header-anchor" href="#接下来是合约的部署" aria-hidden="true">#</a></h4><div class="language-shell"><pre><code>//使用命令
+truffle migrate
+truffle migrate --network networkname //可以在后面加network参数和network名字，部署到指定network
+</code></pre></div><p>在那之前，需要先写好配置文件</p><ol><li><p>编写部署脚本</p><p>migrations里添加1_counter.js</p><div class="language-js"><pre><code><span class="token keyword">const</span> Counter <span class="token operator">=</span> artifacts<span class="token punctuation">.</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">deployer</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  deployer<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span>Counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></li><li><p>部署到本地节点（我没有搞）</p><ol><li><p>先启动一个服务模拟链上环境<code>ganache-cli -p 7545</code>(ganache是开发区块链，提供本地模拟的链上环境)</p></li><li><p>然后添加dev的network</p><div class="language-js"><pre><code><span class="token comment">//truffle-config.js development网络配置</span>
+
+module<span class="token punctuation">.</span>exports<span class="token operator">=</span><span class="token punctuation">{</span>
+  networks<span class="token operator">:</span><span class="token punctuation">{</span>
+    development<span class="token operator">:</span><span class="token punctuation">{</span>
+      host<span class="token operator">:</span><span class="token string">&quot;127.0.0.1&quot;</span><span class="token punctuation">,</span>
+      port<span class="token operator">:</span><span class="token number">7545</span><span class="token punctuation">,</span>
+   		network_id<span class="token operator">:</span><span class="token string">&quot;*&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li><li><p><code>truffle migrate — network development</code>部署，本地部署，不需要验证和gas费</p></li></ol></li><li><p>部署到链上</p><ol><li><p>需要部署到链上的节点，所以先去<a href="https://infura.io/" target="_blank" rel="noopener noreferrer">infura.io</a>创建一个project，然后copy project id（选择endpoints是goerli）</p></li><li><p>当前目录新建两个隐藏文件，.api_key和.mnemonic，.gitignore要添加这两项，分别存储上一步的id和你的钱包账户助记词（主要为了防止外泄）</p></li><li><p>初始化npm ，添加truffle-hdwallet-provider包</p><div class="language-shell"><pre><code><span class="token function">npm</span> init
+<span class="token function">npm</span> i truffle-hdwallet-provider -s
+.gitignore 添加node_modules
+</code></pre></div></li><li><p>config.js里的network里添加新的network goerli</p><div class="language-js"><pre><code><span class="token keyword">const</span> HDWalletProvider <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;truffle-hdwallet-provider&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;fs&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> api_key <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">&#39;.api_key&#39;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> mnemonic <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">&#39;.mnemonic&#39;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  networks<span class="token operator">:</span> <span class="token punctuation">{</span>
+    goerli<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">provider</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">HDWalletProvider</span><span class="token punctuation">(</span>mnemonic<span class="token punctuation">,</span> <span class="token string">&#39;https://goerli.infura.io/v3/&#39;</span> <span class="token operator">+</span> api_key<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      network_id<span class="token operator">:</span> <span class="token string">&#39;5&#39;</span><span class="token punctuation">,</span>
+      gas<span class="token operator">:</span> <span class="token number">4465030</span><span class="token punctuation">,</span>
+      gasPrice<span class="token operator">:</span> <span class="token number">10000000000</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></li><li><p>执行<code>truffle migrate — network goerli</code>部署到goerli，这里会消耗gas费，但没有metamusk弹窗确认的过程，因为我输入了助记词，他直接在钱包扣款了</p><div class="language-shell"><pre><code>//命令行输出
+Compiling your contracts<span class="token punctuation">..</span>.
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token operator">&gt;</span> Everything is up to date, there is nothing to compile.
+
+
+Migrations dry-run <span class="token punctuation">(</span>simulation<span class="token punctuation">)</span>
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token operator">&gt;</span> Network name:    <span class="token string">&#39;goerli-fork&#39;</span>
+<span class="token operator">&gt;</span> Network id:      <span class="token number">5</span>
+<span class="token operator">&gt;</span> Block gas limit: <span class="token number">30000000</span> <span class="token punctuation">(</span>0x1c9c380<span class="token punctuation">)</span>
+
+
+1_counter.js
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+
+   Deploying <span class="token string">&#39;Counter&#39;</span>
+   -------------------
+   <span class="token operator">&gt;</span> block number:        <span class="token number">6818292</span>
+   <span class="token operator">&gt;</span> block timestamp:     <span class="token number">1651505825</span>
+   <span class="token operator">&gt;</span> account:             0x736D76f4C2d4b4CCced0CCA92d3dF0F0e456F35D
+   <span class="token operator">&gt;</span> balance:             <span class="token number">0.04813429249775099</span>
+   <span class="token operator">&gt;</span> gas used:            <span class="token number">135269</span> <span class="token punctuation">(</span>0x21065<span class="token punctuation">)</span>
+   <span class="token operator">&gt;</span> gas price:           <span class="token number">10</span> gwei
+   <span class="token operator">&gt;</span> value sent:          <span class="token number">0</span> ETH
+   <span class="token operator">&gt;</span> total cost:          <span class="token number">0.00135269</span> ETH
+
+   -------------------------------------
+   <span class="token operator">&gt;</span> Total cost:          <span class="token number">0.00135269</span> ETH
+
+Summary
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token operator">&gt;</span> Total deployments:   <span class="token number">1</span>
+<span class="token operator">&gt;</span> Final cost:          <span class="token number">0.00135269</span> ETH
+
+
+
+
+Starting migrations<span class="token punctuation">..</span>.
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+<span class="token operator">&gt;</span> Network name:    <span class="token string">&#39;goerli&#39;</span>
+<span class="token operator">&gt;</span> Network id:      <span class="token number">5</span>
+<span class="token operator">&gt;</span> Block gas limit: <span class="token number">29970705</span> <span class="token punctuation">(</span>0x1c95111<span class="token punctuation">)</span>
+
+
+1_counter.js
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+
+   Deploying <span class="token string">&#39;Counter&#39;</span>
+   -------------------
+   <span class="token operator">&gt;</span> transaction hash:    0x376710e125c35233b468bd232444acc2239c38e837aeecf9ef9de6762715eca8
+   <span class="token operator">&gt;</span> Blocks: <span class="token number">0</span>            Seconds: <span class="token number">5</span>
+   <span class="token operator">&gt;</span> contract address:    0xAc8dC14e7aC85556Bcc22c052FbB5Bc05D4E77D8
+   <span class="token operator">&gt;</span> block number:        <span class="token number">6818298</span>
+   <span class="token operator">&gt;</span> block timestamp:     <span class="token number">1651505843</span>
+   <span class="token operator">&gt;</span> account:             0x736D76f4C2d4b4CCced0CCA92d3dF0F0e456F35D
+   <span class="token operator">&gt;</span> balance:             <span class="token number">0.04813429249775099</span>
+   <span class="token operator">&gt;</span> gas used:            <span class="token number">135269</span> <span class="token punctuation">(</span>0x21065<span class="token punctuation">)</span>
+   <span class="token operator">&gt;</span> gas price:           <span class="token number">10</span> gwei
+   <span class="token operator">&gt;</span> value sent:          <span class="token number">0</span> ETH
+   <span class="token operator">&gt;</span> total cost:          <span class="token number">0.00135269</span> ETH
+
+   <span class="token operator">&gt;</span> Saving artifacts
+   -------------------------------------
+   <span class="token operator">&gt;</span> Total cost:          <span class="token number">0.00135269</span> ETH
+
+Summary
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token operator">&gt;</span> Total deployments:   <span class="token number">1</span>
+<span class="token operator">&gt;</span> Final cost:          <span class="token number">0.00135269</span> ETH
+
+
+</code></pre></div></li></ol></li></ol><h4 id="补充内容" tabindex="-1">补充内容 <a class="header-anchor" href="#补充内容" aria-hidden="true">#</a></h4><ol><li><p>Truffle console使用（可以直接在控制台调用合约）</p><p>先把合约部署到development</p><p><code>truffle console --network development</code>开启调用模式</p></li><li><p><a href="http://truffle-min.sh" target="_blank" rel="noopener noreferrer">truffle-min.sh</a>(压缩artifacts文件)</p><p>我们compile后，是会在build里输出一个json，但是这个json很大，所以可以借助这个脚本来对这个json进行压缩，可以从几千行压缩到几十行，然后我们后续的开发有引用这个json的需求的时候，就可以引入这个压缩的json</p></li></ol><h3 id="_3-hardhat" tabindex="-1">3. Hardhat <a class="header-anchor" href="#_3-hardhat" aria-hidden="true">#</a></h3><p>Hardhat:编译、部署、测试和调试以太坊应用的开发环境，围绕task（任务）和plugins（插件）概念设计</p><p>在命令行运行Hardhat时，都是在运行任务，例如：npx hardhat compile就是运行compile任务</p><p>Hardhat node:开发区块链，提供本地模拟的链上环境</p><p><a href="https://hardhat.org/getting-started/" target="_blank" rel="noopener noreferrer">官方文档</a>,<a href="https://learnblockchain.cn/docs/hardhat/getting-started/" target="_blank" rel="noopener noreferrer">中文文档</a></p><p><a href="https://github.com/NomicFoundation/hardhat-hackathon-boilerplate" target="_blank" rel="noopener noreferrer">参考代码</a></p><p><a href="https://github.com/clark-cui/hardhat-demo" target="_blank" rel="noopener noreferrer">我的代码</a></p><h4 id="创建工程" tabindex="-1">创建工程 <a class="header-anchor" href="#创建工程" aria-hidden="true">#</a></h4><div class="language-shell"><pre><code><span class="token function">mkdir</span> hardhat-demo //创建一个folder
+<span class="token builtin class-name">cd</span> hardhat-demo
+<span class="token function">npm</span> init //初始化npm
+<span class="token function">npm</span> i -s hardhat //当前目录下安装hardhat
+npx hardhat //在当前目录下创建项目,可以选basic-sample<span class="token punctuation">(</span>注意，这一步要开启shell proxy<span class="token punctuation">)</span>
+</code></pre></div><p>contracts里新建Counter.sol，添加一下内容</p><div class="language-solidity"><pre><code><span class="token comment">// SPDX-License-Identifier:  MIT</span>
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">^</span><span class="token version number">0.8.0</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;hardhat/console.sol&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Counter</span><span class="token punctuation">{</span>
+    <span class="token builtin">uint</span> <span class="token keyword">public</span> counter<span class="token punctuation">;</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span><span class="token punctuation">{</span>
+        counter<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;curr counter:&quot;</span><span class="token punctuation">,</span>counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token builtin">uint</span> x<span class="token punctuation">)</span> <span class="token keyword">public</span><span class="token punctuation">{</span>
+        counter<span class="token operator">=</span>counter<span class="token operator">+</span>x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="合约编译-1" tabindex="-1">合约编译 <a class="header-anchor" href="#合约编译-1" aria-hidden="true">#</a></h4><div class="language-js"><pre><code><span class="token comment">//先修改hardhat.config.js，设置编译器版本</span>
+module<span class="token punctuation">.</span>exports<span class="token operator">=</span><span class="token punctuation">{</span>
+  Solidity<span class="token operator">:</span><span class="token string">&quot;0.8.9&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//然后命令行输入</span>
+npx hardhat compile 
+</code></pre></div><h4 id="部署" tabindex="-1">部署 <a class="header-anchor" href="#部署" aria-hidden="true">#</a></h4><ol><li><p>编写部署脚本</p><div class="language-js"><pre><code><span class="token comment">//scripts/deploy_counter.js</span>
+<span class="token keyword">const</span> hre <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;hardhat&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//await hre.run(&#39;compile&#39;);</span>
+  <span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token keyword">await</span> hre<span class="token punctuation">.</span>ethers<span class="token punctuation">.</span><span class="token function">getContractFactory</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> counter <span class="token operator">=</span> <span class="token keyword">await</span> Counter<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//deploy里的括号可以传参，具体看合约里的construtor有没有参数而定</span>
+
+  <span class="token keyword">await</span> counter<span class="token punctuation">.</span><span class="token function">deployed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Counter deployed to:&quot;</span><span class="token punctuation">,</span> counter<span class="token punctuation">.</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>如果想要一次部署多个合约，比如这里有counter和greeter合约，那么可以这么写</p><div class="language-js"><pre><code><span class="token comment">//scripts/deploy.js</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> ethers <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;hardhat&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>deployer<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">await</span> ethers<span class="token punctuation">.</span><span class="token function">getSigners</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#39;Deploying contracts with the account: &#39;</span> <span class="token operator">+</span> deployer<span class="token punctuation">.</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Deploy Greeter</span>
+  <span class="token keyword">const</span> Greeter <span class="token operator">=</span> <span class="token keyword">await</span> ethers<span class="token punctuation">.</span><span class="token function">getContractFactory</span><span class="token punctuation">(</span><span class="token string">&quot;Greeter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> greeter <span class="token operator">=</span> <span class="token keyword">await</span> Greeter<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span><span class="token string">&quot;Hello, Hardhat!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+  <span class="token comment">// Deploy Counter</span>
+  <span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token keyword">await</span> hre<span class="token punctuation">.</span>ethers<span class="token punctuation">.</span><span class="token function">getContractFactory</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> counter <span class="token operator">=</span> <span class="token keyword">await</span> Counter<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// console.log</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Greeter deployed to:&quot;</span><span class="token punctuation">,</span> greeter<span class="token punctuation">.</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Counter deployed to:&quot;</span><span class="token punctuation">,</span> counter<span class="token punctuation">.</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></li><li><p>部署到本地网络</p><p>先启动一个本地网络<code>npx hardhat node</code>,然后再根据端口值来修改hardhat.config.js，增加以下内容</p><div class="language-js"><pre><code><span class="token comment">//hardhat.config.js</span>
+module<span class="token punctuation">.</span>exports<span class="token operator">=</span><span class="token punctuation">{</span>
+  networks<span class="token operator">:</span><span class="token punctuation">{</span>
+    development<span class="token operator">:</span><span class="token punctuation">{</span>
+      url<span class="token operator">:</span><span class="token string">&quot;http://127.0.0.1:8545&quot;</span><span class="token punctuation">,</span>
+      chainId<span class="token operator">:</span><span class="token number">31337</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>执行部署<code>npx hardhat run scripts/deploy_xxx.js [--network 网络]</code>，而这里的话，就是执行<code>npx hardhat run scripts/deploy_counter.js --network development</code></p></li><li><p>部署到链上</p><p>需要部署到链上的节点，所以先去<a href="https://infura.io/" target="_blank" rel="noopener noreferrer">infura.io</a>创建一个project，然后copy project id（选择endpoints是goerli）</p><p>本地添加.api_key和.mnemonic，.gitignore添加过滤这两项，然后修改hardhat.config.js,增加以下内容</p><div class="language-js"><pre><code><span class="token comment">//hardhat.config.js</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#39;fs&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> api_key <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">&#39;.api_key&#39;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> mnemonic <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">&#39;.mnemonic&#39;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports<span class="token operator">=</span><span class="token punctuation">{</span>
+  networks<span class="token operator">:</span><span class="token punctuation">{</span>
+    goerli<span class="token operator">:</span><span class="token punctuation">{</span>
+      url<span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://goerli.infura.io/v3/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>api_key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      accounts<span class="token operator">:</span><span class="token punctuation">{</span>
+        mnemonic<span class="token operator">:</span>mnemonic<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ol><p>​ 执行部署<code>npx hardhat run scripts/deploy.js --network goerli</code></p><h4 id="测试" tabindex="-1">测试 <a class="header-anchor" href="#测试" aria-hidden="true">#</a></h4><div class="language-js"><pre><code><span class="token keyword">const</span> <span class="token punctuation">{</span>expect<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;chai&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>ethers<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;hardhat&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">&quot;counter should be 0 when init , be added 1 after count be called, be added x after add be called with x&quot;</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token keyword">await</span> ethers<span class="token punctuation">.</span><span class="token function">getContractFactory</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> counterInstance <span class="token operator">=</span> <span class="token keyword">await</span> Counter<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> counterInstance<span class="token punctuation">.</span><span class="token function">deployed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token keyword">await</span> counterInstance<span class="token punctuation">.</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">.</span><span class="token function">equal</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> setCountTx <span class="token operator">=</span> <span class="token keyword">await</span> counterInstance<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// wait until the transaction is mined</span>
+    <span class="token keyword">await</span> setCountTx<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token keyword">await</span> counterInstance<span class="token punctuation">.</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">.</span><span class="token function">equal</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> addCountTx <span class="token operator">=</span> <span class="token keyword">await</span> counterInstance<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> addCountTx<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token keyword">await</span> counterInstance<span class="token punctuation">.</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">.</span><span class="token function">equal</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><code>npx hardhat test</code>执行测试</p><h4 id="实战" tabindex="-1">实战 <a class="header-anchor" href="#实战" aria-hidden="true">#</a></h4><ol><li><p>调试利器：console.log</p><div class="language-solidity"><pre><code><span class="token keyword">import</span> <span class="token string">&quot;hardhat/console.sol&quot;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li><li><p>灵活参数部署，利用hardhat可以在代码中引用(这里值的是合约初始化的参数，也就是constructor需要的参数，比如Greeter合约，这里可以在部署脚本里传入参数，比如deploy_greeter.js所写。也可以用nodejs的方式，在命令行传入参数,然后在部署脚本里取出来)</p><ol><li><div class="language-solidity"><pre><code><span class="token comment">// Counter.sol</span>
+<span class="token comment">// SPDX-License-Identifier:  MIT</span>
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">^</span><span class="token version number">0.8.0</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;hardhat/console.sol&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Counter</span><span class="token punctuation">{</span>
+    <span class="token builtin">uint</span> <span class="token keyword">public</span> counter<span class="token punctuation">;</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token builtin">uint</span> _counter<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        counter <span class="token operator">=</span> _counter<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span><span class="token punctuation">{</span>
+        counter<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;curr counter:&quot;</span><span class="token punctuation">,</span>counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token builtin">uint</span> x<span class="token punctuation">)</span> <span class="token keyword">public</span><span class="token punctuation">{</span>
+        counter<span class="token operator">=</span>counter<span class="token operator">+</span>x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// test_counter.js</span>
+const <span class="token punctuation">{</span>expect<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">&quot;chai&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+const <span class="token punctuation">{</span>ethers<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">&quot;hardhat&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">&quot;counter should be 0 when init , be added 1 after count be called, be added x after add be called with x&quot;</span><span class="token punctuation">,</span> async <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const Counter <span class="token operator">=</span> await ethers<span class="token punctuation">.</span><span class="token function">getContractFactory</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    const counterInstance <span class="token operator">=</span> await Counter<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    await counterInstance<span class="token punctuation">.</span><span class="token function">deployed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>await counterInstance<span class="token punctuation">.</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">.</span><span class="token function">equal</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const setCountTx <span class="token operator">=</span> await counterInstance<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// wait until the transaction is mined</span>
+    await setCountTx<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">expect</span><span class="token punctuation">(</span>await counterInstance<span class="token punctuation">.</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">.</span><span class="token function">equal</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    const addCountTx <span class="token operator">=</span> await counterInstance<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    await addCountTx<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>await counterInstance<span class="token punctuation">.</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">.</span><span class="token function">equal</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//deploy_counter.js</span>
+<span class="token comment">//其余相同，只需改下面这一句</span>
+ const counter <span class="token operator">=</span> await Counter<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div></li><li><p>设置deploy脚本</p><div class="language-js"><pre><code><span class="token keyword">const</span> <span class="token punctuation">{</span>ethers<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;hardhat&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> params<span class="token operator">=</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">;</span>
+<span class="token keyword">const</span> value<span class="token operator">=</span>params<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Counter deploy with value:&quot;</span><span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//await hre.run(&#39;compile&#39;);</span>
+  <span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token keyword">await</span> ethers<span class="token punctuation">.</span><span class="token function">getContractFactory</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> counter <span class="token operator">=</span> <span class="token keyword">await</span> Counter<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">await</span> counter<span class="token punctuation">.</span><span class="token function">deployed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Counter deployed to:&quot;</span><span class="token punctuation">,</span> counter<span class="token punctuation">.</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+<span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+</code></pre></div></li><li><p>执行node脚本,并传递参数</p><p>需要两个命令，可以在命令行依次执行，<a href="http://xn--4gqvdzgque2iqseq47a.sh" target="_blank" rel="noopener noreferrer">也可以写成一个.sh</a>，<code>sh ./deploy_by_param.sh </code>执行这个.sh即可</p><div class="language-shell"><pre><code>// ./deploy_by_param.sh
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">HARDHAT_NETWORK</span><span class="token operator">=</span><span class="token string">&#39;development&#39;</span> //设置network的值是development；这就是node执行hardhat脚本附着hardhat参数的方式+
+node scripts/deploy_by_param.js <span class="token number">10</span> //在这里传入初始化参数是10
+</code></pre></div></li></ol></li><li><p>代码扁平：<code>npx hardhat flatten xxx.sol &gt; xxx.sol</code></p><p>本质的意义是，当一个合约的里面有import引用的时候，可以用这个命令把引用的代码和本身的代码放在一起，方便看，这里的话就是<code>npx hardhat flatten contracts/Counter.sol &gt;&gt;Counter.sol</code></p></li><li><p>代码验证</p><p>当合约部署在链上后，可以通过这个命令来对代码进行验证</p><div class="language-shell"><pre><code><span class="token number">1</span>.先安装 <span class="token function">npm</span> i hardhat-etherscan --dev
+<span class="token number">2</span>.hardhat.config.js里添加require<span class="token punctuation">(</span><span class="token string">&quot;@nomiclabs/hardhat-etherscan&quot;</span><span class="token punctuation">)</span>
+<span class="token number">3</span>.添加scankey,const <span class="token assign-left variable">scankey</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span>$<span class="token punctuation">{</span>scanKey<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">;</span> //因为调用etherscan的api，所以需要去他那里申请一个key, https://etherscan.io/,这个key最好也用隐藏文件，不要暴露出去
+<span class="token number">4</span>.在配置里，networks的下面，添加同级项 etherscan:<span class="token punctuation">{</span>apiKey:scankey<span class="token punctuation">}</span>
+<span class="token number">5</span>.命令行执行npx hardhat verify address --network xxx // address是合约的部署地址，xxx是要验证的网络
+</code></pre></div></li><li><p>ABI导出</p><p>当合约部署后，需要导出ABI供前端调用，默认的deploy就会导出一个总的json里面包括abi，不过比较大而已，这里是仅导出abi的json</p><div class="language-shell"><pre><code><span class="token number">1</span>.先安装 <span class="token function">npm</span> i hardhat-abi-exporter --dev
+<span class="token number">2</span>.hardhat.config.js里添加require<span class="token punctuation">(</span><span class="token string">&quot;hardhat-abi-exporter&quot;</span><span class="token punctuation">)</span>
+<span class="token number">3</span>.hardhat.config.js里配置下导出,新建./abi目录来存放
+  abiExporter: <span class="token punctuation">{</span>
+    path: <span class="token string">&#39;./abi&#39;</span>,
+    runOnCompile: true,
+    clear: true,
+    flat: true,
+    spacing: <span class="token number">2</span>,
+    pretty: false,
+  <span class="token punctuation">}</span>
+<span class="token number">4</span>.npx hardhat export-abi
+</code></pre></div></li><li><p>自定义Task</p><p>在hardhat.config.js里可以写task,然后通过<code>npx hardhat taskName</code>完成一些想要做的事，也可以在task文件夹里写，然后在hardhat.config.js用require引入</p><div class="language-js"><pre><code><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">&quot;accounts&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;Prints the list of accounts&quot;</span><span class="token punctuation">,</span><span class="token keyword">async</span><span class="token punctuation">(</span><span class="token parameter">taskArgs<span class="token punctuation">,</span>hre</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> accounts <span class="token operator">=</span><span class="token keyword">await</span> hre<span class="token punctuation">.</span>ethers<span class="token punctuation">.</span><span class="token function">getSigners</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">const</span> account <span class="token keyword">of</span> accounts<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>account<span class="token punctuation">.</span>address<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//命令行 npx hardhat accounts执行</span>
+</code></pre></div></li><li><p>书写脚本去调用合约，实现前端与合约的交互</p><ol><li><p>前端想要调用合约，那就得知道合约的地址和abi，之前有用npm处理了abi的单独导出，但是并没有处理合约的地址，所以这里我们改造下deploy脚本，让它自动保存地址和abi到一个data的目录下</p><div class="language-js"><pre><code><span class="token comment">// scripts/deploy_counter.js</span>
+<span class="token keyword">const</span> hre <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;hardhat&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//await hre.run(&#39;compile&#39;);</span>
+  <span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token keyword">await</span> hre<span class="token punctuation">.</span>ethers<span class="token punctuation">.</span><span class="token function">getContractFactory</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> counter <span class="token operator">=</span> <span class="token keyword">await</span> Counter<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">await</span> counter<span class="token punctuation">.</span><span class="token function">deployed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Counter deployed to:&quot;</span><span class="token punctuation">,</span> counter<span class="token punctuation">.</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">saveFrontendFiles</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">saveFrontendFiles</span><span class="token punctuation">(</span><span class="token parameter">counter</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> contractsDir <span class="token operator">=</span> <span class="token string">&quot;./data&quot;</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fs<span class="token punctuation">.</span><span class="token function">existsSync</span><span class="token punctuation">(</span>contractsDir<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fs<span class="token punctuation">.</span><span class="token function">mkdirSync</span><span class="token punctuation">(</span>contractsDir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span>
+    contractsDir <span class="token operator">+</span> <span class="token string">&quot;/contract-address.json&quot;</span><span class="token punctuation">,</span>
+    <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      Counter<span class="token operator">:</span> counter<span class="token punctuation">.</span>address
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> CounterArtifact <span class="token operator">=</span> artifacts<span class="token punctuation">.</span><span class="token function">readArtifactSync</span><span class="token punctuation">(</span><span class="token string">&quot;Counter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span>
+    contractsDir <span class="token operator">+</span> <span class="token string">&quot;/Counter.json&quot;</span><span class="token punctuation">,</span>
+    <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>CounterArtifact<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    process<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//然后执行脚本 npx hardhat run scripts/deploy_counter.js --network development</span>
+</code></pre></div></li><li><p>新建action.js实现前端调用合约的逻辑</p><div class="language-js"><pre><code><span class="token keyword">const</span> <span class="token punctuation">{</span>
+  ethers
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;hardhat&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> CounterArtifact <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;../data/Counter.json&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> contractAddress <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;../data/contract-address.json&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// init</span>
+  <span class="token keyword">const</span> provider <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ethers<span class="token punctuation">.</span>providers<span class="token punctuation">.</span>JsonRpcProvider</span><span class="token punctuation">(</span><span class="token string">&#39;http://127.0.0.1:8545/&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Then, we initialize the contract using that provider and the token&#39;s</span>
+  <span class="token comment">// artifact. You can do this same thing with your contracts.</span>
+  <span class="token keyword">const</span> counter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ethers<span class="token punctuation">.</span>Contract</span><span class="token punctuation">(</span>
+    contractAddress<span class="token punctuation">.</span>Counter<span class="token punctuation">,</span>
+    CounterArtifact<span class="token punctuation">.</span>abi<span class="token punctuation">,</span>
+    provider<span class="token punctuation">.</span><span class="token function">getSigner</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;counter值是：&quot;</span><span class="token punctuation">,</span><span class="token keyword">await</span> counter<span class="token punctuation">.</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">await</span> counter<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;counter值是：&quot;</span><span class="token punctuation">,</span><span class="token keyword">await</span> counter<span class="token punctuation">.</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></li></ol></li></ol></div></div><footer class="page-footer" data-v-8fcebc32 data-v-5c96fb00><div class="edit" data-v-5c96fb00><div class="edit-link" data-v-5c96fb00 data-v-55695e90><!----></div></div><div class="updated" data-v-5c96fb00><!----></div></footer><!----><!--[--><!--[--><!----><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--><footer data-v-15d3260c> Powered by <a href="https://github.com/clark-cui/" target="_blank" title="作者" data-v-15d3260c>clark-cui</a> | Copyright © 2019-2022 | MIT License </footer><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"readme.md\":\"c6f52484\",\"archives.md\":\"ca903f38\",\"index.md\":\"553c82f4\",\"posts_cosmos详解.md\":\"7d7e258f\",\"posts_defi科普.md\":\"fb339320\",\"posts_tts.md\":\"8e68bc4f\",\"posts_typescript学习笔记.md\":\"fb48a741\",\"posts_buildsite.md\":\"ec9d9534\",\"posts_mac外接显示器.md\":\"8d5e6c2c\",\"posts_proxyconfig.md\":\"9fa059b1\",\"posts_区块链科普.md\":\"cca50001\",\"posts_博客开启https.md\":\"a3bfdd96\",\"posts_变量提升.md\":\"b67a61c5\",\"posts_智能合约开发.md\":\"48e85489\",\"posts_突然日记一.md\":\"39f824b4\",\"posts_虚拟机配置.md\":\"9f66f79e\",\"posts_随便说点啥.md\":\"ffad966d\",\"tags.md\":\"43f8358c\"}")</script>
+    <script type="module" async src="/assets/app.10064a06.js"></script>
+    
+  </body>
+</html>

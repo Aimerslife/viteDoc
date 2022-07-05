@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js变量提升 | Clark Cui</title>
+    <meta name="description" content="javascript的变量提升机制">
+    <link rel="stylesheet" href="/assets/style.0b97b2d7.css">
+    <link rel="modulepreload" href="/assets/Home.bdf9aa60.js">
+    <link rel="modulepreload" href="/assets/app.10064a06.js">
+    <link rel="modulepreload" href="/assets/posts_变量提升.md.b67a61c5.lean.js">
+    
+    <link rel="icon" type="image/jpeg" href="/avator.jpg">
+  <meta name="author" content="Clark Cui">
+  <meta property="og:title" content="Home">
+  <meta property="og:description" content="Home of Clark Cui">
+  <meta name="twitter:title" content="js变量提升 | Clark Cui">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><div class="no-sidebar theme"><header class="nav-bar" data-v-40587210><div class="sidebar-button" data-v-40587210><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="Clark Cui, back to home" data-v-40587210 data-v-016a8bd8><img class="logo" src="/tea.svg" alt="Logo" data-v-016a8bd8> Clark Cui</a><div class="flex-grow" data-v-40587210></div><div class="nav" data-v-40587210><nav class="nav-links" data-v-40587210 data-v-35b91e7e><!--[--><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/" data-v-49fe041d>🏡Home <!----></a></div></div><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/tags" data-v-49fe041d>🔖Tags <!----></a></div></div><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/archives" data-v-49fe041d>📃Archives <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--[--><div class="toggleTheme" data-v-f68cd400><div class="light" data-v-f68cd400>🔆</div></div><!--]--><!--]--></header><aside class="sidebar" data-v-17c48e2f><nav class="nav-links nav" data-v-17c48e2f data-v-35b91e7e><!--[--><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/" data-v-49fe041d>🏡Home <!----></a></div></div><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/tags" data-v-49fe041d>🔖Tags <!----></a></div></div><div class="item" data-v-35b91e7e><div class="nav-link" data-v-35b91e7e data-v-49fe041d><a class="item" href="/archives" data-v-49fe041d>📃Archives <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><!----><!--[--><!--]--></aside><div class="sidebar-mask"></div><main class="page" data-v-8fcebc32><div class="container" data-v-8fcebc32><!--[--><!--[--><!----><!--]--><!--[--><!--[--><h1 class="title" data-v-524a1c9d>js变量提升</h1><div class="date" data-v-524a1c9d>🕒 lastUpdated: an hour ago</div><!--]--><div class="category" data-v-323418c7><ul data-v-323418c7><!--[--><li class="header" data-v-323418c7><a href="#要点" class="header-h1" data-v-323418c7>要点</a><!----></li><li class="header" data-v-323418c7><a href="#举几个例子" class="header-h1" data-v-323418c7>举几个例子</a><!----></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#变量声明与函数声明的提升顺序" class="header-h2" data-v-323418c7>变量声明与函数声明的提升顺序</a></li></ul></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#变量声明的合并" class="header-h2" data-v-323418c7>变量声明的合并</a></li></ul></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#提升到函数作用域顶部" class="header-h2" data-v-323418c7>提升到函数作用域顶部</a></li></ul></li><li class="header" data-v-323418c7><!----><ul data-v-323418c7><li data-v-323418c7><a href="#函数声明提升" class="header-h2" data-v-323418c7>函数声明提升</a></li></ul></li><!--]--></ul></div><!--]--><!--]--><div style="position:relative;" class="content" data-v-8fcebc32><div><blockquote><p><a href="https://juejin.im/post/6844903607066689550" target="_blank" rel="noopener noreferrer">https://juejin.im/post/6844903607066689550</a></p><p>这篇文章讲的还可以，但是有一点讲错了，我在这里补充一下，再加几个常见的面试题。</p></blockquote><h2 id="要点" tabindex="-1">要点 <a class="header-anchor" href="#要点" aria-hidden="true">#</a></h2><ul><li>变量声明 var 和函数声明 function 都会有声明的提升，提升到函数作用域或者全局作用域的顶端，后面提升的排在之前提升的后面，重复的会覆盖之前的声明。</li><li>先提升变量，相同的变量合并，赋值 undefined，再提升函数。</li></ul><h2 id="举几个例子" tabindex="-1">举几个例子 <a class="header-anchor" href="#举几个例子" aria-hidden="true">#</a></h2><h3 id="变量声明与函数声明的提升顺序" tabindex="-1">变量声明与函数声明的提升顺序 <a class="header-anchor" href="#变量声明与函数声明的提升顺序" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Function</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//3</span>
+
+<span class="token comment">//相当于</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">//先提升变量，变量全部提升完后，再提升函数</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="变量声明的合并" tabindex="-1">变量声明的合并 <a class="header-anchor" href="#变量声明的合并" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>      <span class="token comment">//Function</span>
+<span class="token keyword">var</span> a<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">4</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> a<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>      <span class="token comment">//4</span>
+
+<span class="token comment">//相当于</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span><span class="token keyword">undefined</span>；   <span class="token comment">//变量声明合并</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">4</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+a<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+a<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+</code></pre></div><h3 id="提升到函数作用域顶部" tabindex="-1">提升到函数作用域顶部 <a class="header-anchor" href="#提升到函数作用域顶部" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//5</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//相当于</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">//提升变量到函数作用域顶端，并覆盖之前的声明</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="函数声明提升" tabindex="-1">函数声明提升 <a class="header-anchor" href="#函数声明提升" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#39;foo&#39;</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//TypeError bar is not a function</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;foo&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> <span class="token function-variable function">bar</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;bar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//相当于</span>
+<span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">//先提升变量</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//提升函数声明</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;foo&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function-variable function">bar</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;bar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div></div><footer class="page-footer" data-v-8fcebc32 data-v-5c96fb00><div class="edit" data-v-5c96fb00><div class="edit-link" data-v-5c96fb00 data-v-55695e90><!----></div></div><div class="updated" data-v-5c96fb00><!----></div></footer><!----><!--[--><!--[--><!----><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--><footer data-v-15d3260c> Powered by <a href="https://github.com/clark-cui/" target="_blank" title="作者" data-v-15d3260c>clark-cui</a> | Copyright © 2019-2022 | MIT License </footer><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"readme.md\":\"c6f52484\",\"archives.md\":\"ca903f38\",\"index.md\":\"553c82f4\",\"posts_cosmos详解.md\":\"7d7e258f\",\"posts_defi科普.md\":\"fb339320\",\"posts_tts.md\":\"8e68bc4f\",\"posts_typescript学习笔记.md\":\"fb48a741\",\"posts_buildsite.md\":\"ec9d9534\",\"posts_mac外接显示器.md\":\"8d5e6c2c\",\"posts_proxyconfig.md\":\"9fa059b1\",\"posts_区块链科普.md\":\"cca50001\",\"posts_博客开启https.md\":\"a3bfdd96\",\"posts_变量提升.md\":\"b67a61c5\",\"posts_智能合约开发.md\":\"48e85489\",\"posts_突然日记一.md\":\"39f824b4\",\"posts_虚拟机配置.md\":\"9f66f79e\",\"posts_随便说点啥.md\":\"ffad966d\",\"tags.md\":\"43f8358c\"}")</script>
+    <script type="module" async src="/assets/app.10064a06.js"></script>
+    
+  </body>
+</html>

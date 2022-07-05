@@ -1,0 +1,77 @@
+import{_ as n,c as s,o as a,a as p}from"./app.10064a06.js";const m='{"title":"js\u53D8\u91CF\u63D0\u5347","description":"javascript\u7684\u53D8\u91CF\u63D0\u5347\u673A\u5236","frontmatter":{"title":"js\u53D8\u91CF\u63D0\u5347","description":"javascript\u7684\u53D8\u91CF\u63D0\u5347\u673A\u5236","date":"2020-12-08T00:00:00.000Z","tags":["javascript"]},"headers":[{"level":2,"title":"\u8981\u70B9","slug":"\u8981\u70B9"},{"level":2,"title":"\u4E3E\u51E0\u4E2A\u4F8B\u5B50","slug":"\u4E3E\u51E0\u4E2A\u4F8B\u5B50"},{"level":3,"title":"\u53D8\u91CF\u58F0\u660E\u4E0E\u51FD\u6570\u58F0\u660E\u7684\u63D0\u5347\u987A\u5E8F","slug":"\u53D8\u91CF\u58F0\u660E\u4E0E\u51FD\u6570\u58F0\u660E\u7684\u63D0\u5347\u987A\u5E8F"},{"level":3,"title":"\u53D8\u91CF\u58F0\u660E\u7684\u5408\u5E76","slug":"\u53D8\u91CF\u58F0\u660E\u7684\u5408\u5E76"},{"level":3,"title":"\u63D0\u5347\u5230\u51FD\u6570\u4F5C\u7528\u57DF\u9876\u90E8","slug":"\u63D0\u5347\u5230\u51FD\u6570\u4F5C\u7528\u57DF\u9876\u90E8"},{"level":3,"title":"\u51FD\u6570\u58F0\u660E\u63D0\u5347","slug":"\u51FD\u6570\u58F0\u660E\u63D0\u5347"}],"relativePath":"posts/\u53D8\u91CF\u63D0\u5347.md","lastUpdated":1657026306745}',t={},o=p(`<blockquote><p><a href="https://juejin.im/post/6844903607066689550" target="_blank" rel="noopener noreferrer">https://juejin.im/post/6844903607066689550</a></p><p>\u8FD9\u7BC7\u6587\u7AE0\u8BB2\u7684\u8FD8\u53EF\u4EE5\uFF0C\u4F46\u662F\u6709\u4E00\u70B9\u8BB2\u9519\u4E86\uFF0C\u6211\u5728\u8FD9\u91CC\u8865\u5145\u4E00\u4E0B\uFF0C\u518D\u52A0\u51E0\u4E2A\u5E38\u89C1\u7684\u9762\u8BD5\u9898\u3002</p></blockquote><h2 id="\u8981\u70B9" tabindex="-1">\u8981\u70B9 <a class="header-anchor" href="#\u8981\u70B9" aria-hidden="true">#</a></h2><ul><li>\u53D8\u91CF\u58F0\u660E var \u548C\u51FD\u6570\u58F0\u660E function \u90FD\u4F1A\u6709\u58F0\u660E\u7684\u63D0\u5347\uFF0C\u63D0\u5347\u5230\u51FD\u6570\u4F5C\u7528\u57DF\u6216\u8005\u5168\u5C40\u4F5C\u7528\u57DF\u7684\u9876\u7AEF\uFF0C\u540E\u9762\u63D0\u5347\u7684\u6392\u5728\u4E4B\u524D\u63D0\u5347\u7684\u540E\u9762\uFF0C\u91CD\u590D\u7684\u4F1A\u8986\u76D6\u4E4B\u524D\u7684\u58F0\u660E\u3002</li><li>\u5148\u63D0\u5347\u53D8\u91CF\uFF0C\u76F8\u540C\u7684\u53D8\u91CF\u5408\u5E76\uFF0C\u8D4B\u503C undefined\uFF0C\u518D\u63D0\u5347\u51FD\u6570\u3002</li></ul><h2 id="\u4E3E\u51E0\u4E2A\u4F8B\u5B50" tabindex="-1">\u4E3E\u51E0\u4E2A\u4F8B\u5B50 <a class="header-anchor" href="#\u4E3E\u51E0\u4E2A\u4F8B\u5B50" aria-hidden="true">#</a></h2><h3 id="\u53D8\u91CF\u58F0\u660E\u4E0E\u51FD\u6570\u58F0\u660E\u7684\u63D0\u5347\u987A\u5E8F" tabindex="-1">\u53D8\u91CF\u58F0\u660E\u4E0E\u51FD\u6570\u58F0\u660E\u7684\u63D0\u5347\u987A\u5E8F <a class="header-anchor" href="#\u53D8\u91CF\u58F0\u660E\u4E0E\u51FD\u6570\u58F0\u660E\u7684\u63D0\u5347\u987A\u5E8F" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Function</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//3</span>
+
+<span class="token comment">//\u76F8\u5F53\u4E8E</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">//\u5148\u63D0\u5347\u53D8\u91CF\uFF0C\u53D8\u91CF\u5168\u90E8\u63D0\u5347\u5B8C\u540E\uFF0C\u518D\u63D0\u5347\u51FD\u6570</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="\u53D8\u91CF\u58F0\u660E\u7684\u5408\u5E76" tabindex="-1">\u53D8\u91CF\u58F0\u660E\u7684\u5408\u5E76 <a class="header-anchor" href="#\u53D8\u91CF\u58F0\u660E\u7684\u5408\u5E76" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>      <span class="token comment">//Function</span>
+<span class="token keyword">var</span> a<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">4</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> a<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>      <span class="token comment">//4</span>
+
+<span class="token comment">//\u76F8\u5F53\u4E8E</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span><span class="token keyword">undefined</span>\uFF1B   <span class="token comment">//\u53D8\u91CF\u58F0\u660E\u5408\u5E76</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">4</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+a<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+a<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+</code></pre></div><h3 id="\u63D0\u5347\u5230\u51FD\u6570\u4F5C\u7528\u57DF\u9876\u90E8" tabindex="-1">\u63D0\u5347\u5230\u51FD\u6570\u4F5C\u7528\u57DF\u9876\u90E8 <a class="header-anchor" href="#\u63D0\u5347\u5230\u51FD\u6570\u4F5C\u7528\u57DF\u9876\u90E8" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//5</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//\u76F8\u5F53\u4E8E</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">//\u63D0\u5347\u53D8\u91CF\u5230\u51FD\u6570\u4F5C\u7528\u57DF\u9876\u7AEF\uFF0C\u5E76\u8986\u76D6\u4E4B\u524D\u7684\u58F0\u660E</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="\u51FD\u6570\u58F0\u660E\u63D0\u5347" tabindex="-1">\u51FD\u6570\u58F0\u660E\u63D0\u5347 <a class="header-anchor" href="#\u51FD\u6570\u58F0\u660E\u63D0\u5347" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#39;foo&#39;</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//TypeError bar is not a function</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;foo&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> <span class="token function-variable function">bar</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;bar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//\u76F8\u5F53\u4E8E</span>
+<span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">//\u5148\u63D0\u5347\u53D8\u91CF</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//\u63D0\u5347\u51FD\u6570\u58F0\u660E</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;foo&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function-variable function">bar</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;bar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div>`,12),c=[o];function e(u,l,k,i,r,d){return a(),s("div",null,c)}var h=n(t,[["render",e]]);export{m as __pageData,h as default};
